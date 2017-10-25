@@ -4,39 +4,40 @@
 
 function main () {
 
-  $().removeClass(["sauce-white"]);
+  $(".sauce").removeClass("sauce-white");
 
   $(".btn-pepperonni").on("click", function(){
       $(this).toggleClass("active");
-      $(".pep").toggle();
+      $(".pep").toggle(2000);
   });
 
   $(".btn-mushrooms").click(function(){
     $(this).toggleClass("active");
-    $(".mushroom").toggle();
+    $(".mushroom").toggle(3000);
   });
 
   $(".btn-green-peppers").click(function(){
     $(this).toggleClass("active");
-    $(".green-pepper").toggle();
+    $(".green-pepper").toggle(1000);
   });
 
 
 /* WE WERE TRYING TO REMOVE THE WHITE
-SAUCE AS DEFAULT
+SAUCE AS DEFAULT*/
 
 
   $(".btn-sauce").click(function(){
+    $(".sauce").toggleClass("sauce-white");
     $(this).toggleClass("active");
-    $(".sauce-white").toggle();
+    //$(".sauce-white").toggle(3000);
   });
 
-  $(".crust").click(function(){
+  $(".btn-crust").click(function(){
+    $(".crust").toggleClass("crust-gluten-free");
     $(this).toggleClass("active");
-    $(".crust-gluten-free").toggle();
   });
 
 }
-*/
+
 
 $(document).ready(main);
